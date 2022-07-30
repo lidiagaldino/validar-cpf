@@ -13,9 +13,9 @@ function eliminacao() {
 
     }
 
-    if (soma == (parseInt(cpf[0]) * 11)) {
+    if (soma == (parseInt(cpf[0]) * 11) && soma == (parseInt(cpf[1]) * 11) && soma == (parseInt(cpf[2]) * 11)) {
 
-        resultado.textContent = 'CPF inválido';
+        resultado.textContent = 'CPF inválido 1' + soma;
 
     } else{
         validarPrimeiroPasso();
@@ -38,7 +38,7 @@ function validarPrimeiroPasso() {
     if (digitoUm == parseInt(cpf[9])) {
         validarSegundoPasso();
     } else{
-        resultado.textContent = 'CPF inválido';
+        resultado.textContent = 'CPF inválido 2';
     }
     
 }
@@ -59,7 +59,7 @@ function validarSegundoPasso() {
     if (digitoDois == parseInt(cpf[10])) {
         resultado.textContent = 'CPF válido';
     } else{
-        resultado.textContent = 'CPF inválido';
+        resultado.textContent = 'CPF inválido 3';
     }
 }
 
